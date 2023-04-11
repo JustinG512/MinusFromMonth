@@ -1,15 +1,12 @@
 /* Online Java Compiler and Editor */
 public class HelloWorld {
 
-    public static void main(String []args) {
-        // System.out.println("Hello, World!");
-
+    public static void main(String[] args) {
         int month = 1;
         int day = 2;
 
         String result = fourDaysBefore(day, month);
-        System.out.println(result);
-
+        System.out.printf("Four days before (%d/%d) is (%s)%n", month, day, result);
     }
 
     public static String fourDaysBefore(int day, int month) {
@@ -26,7 +23,6 @@ public class HelloWorld {
             day = months[month] - daysFromPMonth;
         }
 
-        return month + "," + day;
+        return String.format("%d,%d", month, day);
     }
-
 }
